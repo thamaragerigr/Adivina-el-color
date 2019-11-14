@@ -1,0 +1,205 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background-color: ;
+    color: black;
+    font-family: 'Liu Jian Mao Cao', cursive;
+}
+
+.colourButton {
+    width: 70px;
+    height: 70px;
+    border: none;
+    border-radius: 50%;
+    box-shadow: none;
+}
+
+
+#buttonWrapper {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px auto;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+svg {
+    display: block;
+    font: 100px 'Montserrat';
+    position: relative;
+    right: 50%;
+    transform: translate(50%);
+
+}
+
+.text-copy {
+    fill: none;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 2px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1) {
+    stroke: rgb(251, 255, 0);
+    animation-delay: -1;
+}
+
+.text-copy:nth-child(2) {
+    stroke: #358CFF;
+    animation-delay: -2s;
+}
+
+.text-copy:nth-child(3) {
+    stroke: #41EAD4;
+    animation-delay: -3s;
+}
+
+.text-copy:nth-child(4) {
+    stroke: rgb(255, 0, 119);
+    animation-delay: -4s;
+}
+
+.text-copy:nth-child(5) {
+    stroke: #008cff;
+    animation-delay: -5s;
+}
+
+@keyframes stroke-offset {
+    100% {
+        stroke-dashoffset: -35%;
+    }
+}
+
+p,
+#answer {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bolder;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 50px;
+
+}
+
+
+#colourValue {
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-top: 30px;
+
+}
+
+
+#reset {
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+button:focus {
+    outline: 0;
+}
+
+/*
+#resetButton{
+  background: lighten($red, 3%);  
+  border: 1px solid darken($red, 4%);
+  box-shadow: 0px 2px 0 darken($red, 5%), 2px 4px 6px darken($red, 2%);
+  font-weight: 900;
+  letter-spacing: 1px;
+  transition: all 150ms linear;
+    
+}
+
+#resetButton:hover {
+    background: darken($red, 1.5%);
+    border: 1px solid rgba(#000, .05);
+    box-shadow: 1px 1px 2px rgba(#fff, .2);
+    color: lighten($red, 18%); 
+    text-decoration: none;
+    text-shadow: -1px -1px 0 darken($red, 9.5%);
+    transition: all 250ms linear;
+  }
+  
+
+
+
+*/
+#contenido {
+    position: relative;
+    top: -40px;
+
+}
+
+#reset button {
+    width: 120px;
+    height: 50px;
+    font-size: 20px;
+    margin: auto;
+    line-height: 50px;
+    text-decoration: none;
+    position: relative;
+    top: 40px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    border: none;
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-transform: uppercase;
+    color: rgb(255, 249, 249);
+    transition: all 500ms;
+    -webkit-transition: all 500ms;
+    -moz-transition: all 500ms;
+    z-index: 1;
+    margin-bottom: 20px;
+    background: rgb(202, 202, 202);
+}
+
+#reset button:after,
+#reset button:before {
+    display: block;
+    background: rgb(104, 104, 104);
+    width: 0;
+    height: 50px;
+    content: "";
+    position: absolute;
+    -webkit-transition: all 500ms;
+    -moz-transition: all 500ms;
+    -ms-transition: all 500ms;
+    -o-transition: all 500ms;
+    transition: all 500ms;
+    z-index: -1;
+}
+
+#reset button:after {
+    bottom: 0px;
+    left: 0px;
+    width: 50%:
+}
+
+#reset button:before {
+    top: 0px;
+    right: 0px;
+}
+
+#reset button:hover:after,
+#reset button:hover:before {
+    width: 100%;
+}
+
+@media (min-width: 1000px) {
+    #juego {
+        position: relative;
+        top: -120px;
+    }
+}
