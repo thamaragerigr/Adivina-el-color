@@ -1,4 +1,3 @@
-'use strict'
 //valor rgb generado al azar con Math.random y Math.round
 function makeColourValue() {
   return Math.round(Math.random() * 255);
@@ -13,15 +12,12 @@ function setButtonColour(button, red, green, blue) {
 }
 
 //nombramiento de variables
-var buttons = document.getElementsByClassName("colourButton");
-
-var heading = document.getElementById("colourValue");
-
-var answerMessage = document.getElementById("answer");
+const buttons = document.getElementsByClassName("colourButton");
+const heading = document.getElementById("colourValue");
+const answerMessage = document.getElementById("answer");
 
 //funcion general del juego
 function startGame() {
-
   var answerButton = Math.round(Math.random() * (buttons.length - 1));
   //loop/generador de valores random
   for (var i = 0; i < buttons.length; i++) {
@@ -40,7 +36,6 @@ function startGame() {
         answerMessage.innerHTML = "¡Correcto!";
         document.body.style.background = " rgb(251, 255, 0)";
         confetti.start();
-        //document.body.style.background = "rgb(" + red + "," + green + "," + blue + ")";
       } else {
         answerMessage.innerHTML = "¡Respuesta equivocada! ¡Inténtalo de nuevo!";
         document.body.style.background = "white";
@@ -49,7 +44,7 @@ function startGame() {
   }
 }
 
-function resetear() {
+function reset() {
     //limpiar mensaje de respuesta correcta/incorrecta
     answerMessage.innerHTML = "";
     document.body.style.background = "white";
